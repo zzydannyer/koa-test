@@ -5,7 +5,7 @@ module.exports = (err, ctx) => {
       status = 400;
       break;
     case "10002":
-      status = 409; //代表冲突\
+      status = 409; //代表冲突
       break;
     default:
       status = 500;
