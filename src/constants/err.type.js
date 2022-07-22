@@ -71,7 +71,27 @@ module.exports = {
   },
   invalidGoodsId: {
     code: "10205",
-    message: "商品ID不存在或状态已变更",
+    message: "商品不存在或已下架",
+    result: "",
+  },
+  outOfStock: {
+    code: "10206",
+    message: "库存不足",
+    result: "",
+  },
+  cartsFormatError: {
+    code: "10301",
+    message: "购物车参数格式错误",
+    result: "",
+  },
+  addrFormatError: {
+    code: "10401",
+    message: "地址参数格式错误",
+    result: "",
+  },
+  orderFormatError: {
+    code: "10501",
+    message: "订单参数格式错误",
     result: "",
   },
 };

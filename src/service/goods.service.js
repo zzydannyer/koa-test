@@ -1,3 +1,4 @@
+const { userNotExist } = require("../constants/err.type");
 const Goods = require("../model/goods.model");
 
 class GoodsService {
@@ -31,6 +32,7 @@ class GoodsService {
   async findGoods(pageNum, pageSize) {
     const offset = (pageNum - 1) * pageSize;
     //count() + findAll({ offset, limit })
+
     const { count, rows } = await Goods.findAndCountAll({
       offset,
       limit: pageSize * 1,
@@ -41,6 +43,10 @@ class GoodsService {
       total: count,
       list: rows,
     };
+  }
+  async findGoodsId(id) {
+    const res = await Goods.findAll({ where: { id } });
+    return res[0];
   }
 }
 module.exports = new GoodsService();

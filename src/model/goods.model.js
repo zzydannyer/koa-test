@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 const seq = require("../db/seq");
 
 const Goods = seq.define(
-  "koa-goods",
+  "koa_goods",
   {
     goods_name: {
       type: DataTypes.STRING,

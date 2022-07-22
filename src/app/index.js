@@ -20,6 +20,7 @@ app.use(async (ctx, next) => {
 app.use(cors());
 app.use(
   KoaBody({
+    parsedMethods: ["POST", "PUT", "PATCH","DELETE"],
     // 配置文件上传
     multipart: true,
     /* formidable: {
